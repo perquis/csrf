@@ -1,0 +1,65 @@
+{
+  "name": "csurf2",
+  "version": "0.0.1",
+  "description": "CSRF token middleware for expressjs framework 🧪",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "publish": "",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "prettier": "prettier --write .",
+    "type:check": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perquis/csurf2.git"
+  },
+  "keywords": [],
+  "author": "perquis",
+  "badges": [],
+  "maintainers": [
+    "perquis"
+  ],
+  "markdown": "github",
+  "packageManager": "npm@9.8.1",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/perquis/csurf2/issues"
+  },
+  "homepage": "https://github.com/perquis/csurf2#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.24.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "commitizen-emoji": "^1.0.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "npm-audit-helper": "^4.0.1",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.3",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  }
+}

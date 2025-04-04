@@ -1,0 +1,11 @@
+src/
+.github/
+.vscode/
+
+.npmignore
+
+.gitattributes
+.gitignore
+.gitmodules
+
+.tgz

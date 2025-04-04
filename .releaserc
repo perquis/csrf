@@ -1,0 +1,26 @@
+{
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "npx rjp package.json version <%= nextRelease.version %>"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json"
+        ],
+        "message": ":bookmark: tags(${nextRelease.version}): Created the new release and deployed it. [skip ci]"
+      }
+    ],
+    "@semantic-release/changelog"
+  ]
+}

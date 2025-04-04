@@ -1,0 +1,5 @@
+#!/bin/sh
+npx commitlint --edit "$1"
+echo
+printf "\e[35mHappy coding! 🔥\e[0m\n"
+echo
