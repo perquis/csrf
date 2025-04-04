@@ -24,12 +24,20 @@
     "type": "git",
     "url": "git+https://github.com/perquis/csurf2.git"
   },
-  "keywords": [],
+  "keywords": [
+    "csrf",
+    "tokens",
+    "middleware",
+    "express"
+  ],
   "author": "perquis",
   "badges": [],
   "maintainers": [
     "perquis"
   ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
   "markdown": "github",
   "packageManager": "npm@9.8.1",
   "license": "ISC",
@@ -49,7 +57,11 @@
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.14.0",
+    "body-parser": "^2.2.0",
     "commitizen-emoji": "^1.0.5",
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.7",
+    "cookie-session": "^2.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.24.0",
     "globals": "^16.0.0",
@@ -61,5 +73,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "cookie": "^1.0.2",
+    "csrf": "^3.1.0"
   }
 }
