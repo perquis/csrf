@@ -50,7 +50,7 @@ export default defineConfig([
           offsetTernaryExpressions: true
         },
       ],
-      '@stylistic/js/max-len': ['error', { code: 80 }],
+      '@stylistic/js/max-len': ['error', { code: 100 }],
       '@stylistic/js/semi': ['error', 'always'],
     },
   },
