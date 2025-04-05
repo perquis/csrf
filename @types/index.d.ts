@@ -1,7 +1,7 @@
 declare global {
 	namespace Express {
 		interface Request {
-			csrf: string;
+			csrfToken: () => string;
 		}
 	}
 }

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ESNext",
     "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
@@ -13,11 +13,11 @@
     ],
 		"outDir": "dist",
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
@@ -37,13 +37,13 @@
     "noPropertyAccessFromIndexSignature": true,
     "allowUnusedLabels": true,
     "allowUnreachableCode": true,
+		"allowArbitraryExtensions": true
   },
   "include": [
     "./src/**/*.ts",
+		"./@types/index.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
-    "**/*.test.ts",
   ]
 }

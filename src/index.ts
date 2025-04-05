@@ -1,3 +1,2 @@
-const csrf = {};
-
-export { csrf as default };
+export { csrf as default } from '@/core/csrf';
+export { CsrfError } from '@/core/errors/csrf-error';

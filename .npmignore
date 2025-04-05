@@ -28,3 +28,4 @@ rollup.config.mjs
 README.md
 
 tsconfig.json
+@types/
