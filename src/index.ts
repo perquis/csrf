@@ -1,3 +1,3 @@
-const csurf2 = {};
+const csrf = {};
 
-export { csurf2 as default };
+export { csrf as default };

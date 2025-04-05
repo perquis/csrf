@@ -1,5 +1,5 @@
 {
-  "name": "csurf2",
+  "name": "csrf",
   "version": "0.0.1",
   "description": "CSRF token middleware for expressjs framework 🧪",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perquis/csurf2.git"
+    "url": "git+https://github.com/perquis/csrf.git"
   },
   "keywords": [
     "csrf",
@@ -45,9 +45,9 @@
   "license": "MIT",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/perquis/csurf2/issues"
+    "url": "https://github.com/perquis/csrf/issues"
   },
-  "homepage": "https://github.com/perquis/csurf2#readme",
+  "homepage": "https://github.com/perquis/csrf#readme",
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
