@@ -1,6 +1,9 @@
 src/
+coverages/
+
 .github/
 .vscode/
+.husky/
 
 .npmignore
 
@@ -8,4 +11,20 @@ src/
 .gitignore
 .gitmodules
 
-.tgz
+*.tgz
+
+.releaserc
+.nvmrc
+.czrc
+.editorconfig
+.prettierrc.mjs
+
+commitlint.config.js
+eslint.config.js
+jest.config.ts
+
+rollup.config.mjs
+
+README.md
+
+tsconfig.json
