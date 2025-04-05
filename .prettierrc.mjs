@@ -1,7 +1,7 @@
 export default {
   traillingComma: 'all',
   endOfLine: 'crlf',
-  printWidth: 80,
+  printWidth: 100,
   semi: true,
   singleQuote: true,
   tabWidth: 2,
