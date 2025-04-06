@@ -1,25 +1,17 @@
 {
-  "name": "csrf",
+  "name": "@safe-headers/csrf",
   "version": "0.0.1",
   "description": "CSRF token middleware for expressjs framework 🧪",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
+	"types": "dist/index.d.ts",
   "scripts": {
-    "start": "rollup -c -w",
-    "build": "rollup -c",
-    "test": "jest",
+		"build": "tsup src/index.ts --dts && cat @types/index.d.ts >> dist/index.d.ts",
     "publish": "semantic-release",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "prettier": "prettier --write .",
     "type:check": "tsc --noEmit",
+    "test": "jest",
     "prepare": "husky"
   },
   "repository": {
@@ -43,7 +35,6 @@
   "markdown": "github",
   "packageManager": "npm@9.8.1",
   "license": "MIT",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/perquis/csrf/issues"
   },
@@ -52,13 +43,12 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.24.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^7.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
     "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@types/cookie-signature": "^1.1.2",
     "@types/express": "^5.0.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.14.0",
@@ -74,10 +64,11 @@
     "jest": "^29.7.0",
     "npm-audit-helper": "^4.0.1",
     "prettier": "^3.5.3",
-    "rollup": "^4.39.0",
     "semantic-release": "^24.2.3",
     "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.13",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0"
   },
@@ -85,7 +76,7 @@
     "cookie": "^1.0.2",
     "cookie-signature": "^1.2.2",
     "csrf": "^3.1.0",
-    "http-errors": "^2.0.0",
+    "http-method-enum": "^1.0.0",
     "http-status-codes": "^2.3.0"
   }
 }
