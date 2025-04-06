@@ -9,10 +9,12 @@ import type { HTTPMethod } from 'http-method-enum';
 export type ProtectedMethods = HTTPMethod[];
 
 export class CsrfController {
-  private tokens = new Tokens();
   public secret: string | null = null;
   
-  constructor(private signatureService = new SignatureService()) {}
+  constructor(
+		private signatureService = new SignatureService(),
+		private tokens = new Tokens()
+  ) {}
 
   public setCookie(res: Response): void {
     if (!this.secret) this.secret = this.tokens.secretSync();
@@ -20,7 +22,7 @@ export class CsrfController {
     res.setHeader('Set-Cookie', cookie.serialize(TokenKeyName._CSRF, this.secret, cookieOptions));
   }
 
-  public getToken() {
+  public generateToken() {
     const newToken = this.tokens.create(this.secret!);
 
     this.signatureService.generate(this.secret!, newToken);

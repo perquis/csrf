@@ -26,7 +26,7 @@ jest.mock('cookie-signature', () => ({
 }));
 
 const setCookieMock = jest.fn();
-const getTokenMock = jest.fn()
+const generateMockToken = jest.fn()
   .mockReturnValue('mocked-token');
 const verifyTokenMock = jest.fn()
   .mockReturnValue(true);
@@ -35,7 +35,7 @@ jest.mock('@/core/controllers/csrf-controller', () => ({
   CsrfController: jest.fn()
     .mockImplementation(() => ({
       setCookie: setCookieMock,
-      getToken: getTokenMock,
+      generateToken: generateMockToken,
       verifyToken: verifyTokenMock,
     })),
 }));
@@ -90,7 +90,7 @@ describe('csrf', () => {
       .toHaveBeenCalledWith(new CsrfError());
   });
 
-  it(`should passes if CSRF token present, POST method, and body is valid`, () => {
+  it(`should pass if CSRF token present, POST method, and body is valid`, () => {
     reqMock.method = 'POST';
     reqMock.cookies[TokenKeyName._CSRF] = 'mocked-token';
     reqMock.body = { _csrf: 'mocked-token' };

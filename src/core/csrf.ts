@@ -15,7 +15,7 @@ export const csrf = (): RequestHandler => {
       csrfController.setCookie(res);
     }
 
-    req.csrfToken = csrfController.getToken;
+    req.csrfToken = () => csrfController.generateToken();
 
     if (securityLevel === SecurityLevel.PROTECTED_METHOD_NO_SECRET_FOUND) {
       return next(new CsrfError());
