@@ -45,7 +45,7 @@ describe('csrf-controller', () => {
   });
 
   it('should get token', () => {
-    const token = csrfController.getToken();
+    const token = csrfController.generateToken();
 
     expect(token)
       .toBe('mocked-token');
