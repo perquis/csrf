@@ -4,3 +4,5 @@ export const cookieOptions = {
   sameSite: 'strict' as const,
   path: '/',
 };
+
+export const SET_COOKIE_HEADER = 'Set-Cookie';
