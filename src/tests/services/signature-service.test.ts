@@ -1,4 +1,4 @@
-import { SignatureService } from "@/core/services/signature-service";
+import { SignatureService } from "@/services/signature.service";
 
 describe('signature-service', () => {
   const value = `secret.JO5pGXefw6ol82MSwdeL4jug23MgOUg9BaoFyssoP0A`;
@@ -7,7 +7,7 @@ describe('signature-service', () => {
   it('should generate a signature', () => {
     signatureService.generate('secret', 'token');
 		
-    expect(signatureService.signed)
+    expect(signatureService['signed'])
       .toBe(value);
   });
 	
@@ -26,8 +26,8 @@ describe('signature-service', () => {
   });
 	
   it('should return false if no signature is generated', () => {
-    const service = new SignatureService();
-    const verify = service.verify('token');
+    signatureService['signed'] = '';
+    const verify = signatureService.verify('token');
 		
     expect(verify)
       .toBe(false);
